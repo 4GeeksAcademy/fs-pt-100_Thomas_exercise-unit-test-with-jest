@@ -31,7 +31,7 @@ test("One dollar should be 150.22 yen", function() {
     // Use the function like its supposed to be used
     const yen = fromDollarToYen(180.01);
 
-    const expected = (180.01 * 1.07) * 156.5; 
+    const expected = (180.01 / 1.07) * 156.5; 
     
     // This is the comparison for the unit test
      expect(fromDollarToYen(180.01)).toBe(expected); 
@@ -44,7 +44,7 @@ test("One yen should be 0.0052 pounds", function() {
     // Use the function like its supposed to be used
     const pounds = fromYenToPound(555.56);
 
-    const expected = (555.56 * 156.5) * 0.87; 
+    const expected = (555.56 / 156.5) * 0.87; 
     
     // This is the comparison for the unit test
      expect(fromYenToPound(555.56)).toBe(expected); 

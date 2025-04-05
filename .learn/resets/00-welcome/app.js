@@ -11,15 +11,15 @@ const fromEuroToDollar = (eur) => {
     return valueInDollar;
 }
 
-const fromDollarToYen = (usd) => {
-    let valueInEuro = usd / oneEuroIs["USD"];
-    let valueInYen = valueInEuro * oneEuroIs["JPY"]
+const fromDollarToYen = (eur) => {
+    let valueInDollar = eur * oneEuroIs["USD"];
+    let valueInYen = valueInDollar * oneEuroIs["JPY"]
     return valueInYen;
 }
 
-const fromYenToPound = (jpy) => {
-    let valueInEuro = jpy / oneEuroIs["JPY"]
-    let valueInPound = valueInEuro * oneEuroIs["GBP"];
+const fromYenToPound = (eur) => {
+    let valueInYen = eur * oneEuroIs["JPY"]
+    let valueInPound = valueInYen * oneEuroIs["GBP"];
     return valueInPound;
 }
 
